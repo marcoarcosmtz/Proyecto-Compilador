@@ -10,7 +10,7 @@ namespace ProyectoCompilador
     {
         static void Main(string[] args)
         {
-            Scanner scanner = new Scanner(@"C:\Users\Marco\Desktop\codigo.txt");
+            Scanner scanner = new Scanner(@"C:\Users\Marco\Desktop\ejemplo5.txt");
             scanner.InitScanner();
             List<Token> tokens = scanner.tokens;   
             /**
@@ -22,11 +22,12 @@ namespace ProyectoCompilador
                 Console.ReadLine();
                 return;
             }
-            Parser parser = new Parser(@"C:\Users\Marco\Desktop\parser.txt");
-            parser.SetAutomata();
+            Parser parser = new Parser();
+            parser.SetAutomata(@"C:\Users\Marco\Desktop\parser.txt");
+            // parser.SetAutomata();
             parser.SetGrammar(@"C:\Users\Marco\Desktop\grammar.txt");
             parser.IniciaAnalisis(tokens);
-            Console.WriteLine(System.IO.Path.GetDirectoryName(System.IO.Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory())));
+            
             Console.ReadLine();
         }
     }

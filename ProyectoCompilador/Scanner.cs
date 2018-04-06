@@ -29,7 +29,7 @@ namespace ProyectoCompilador
             matriz.SetMatriz();
             // string codigo = System.IO.File.ReadAllText(path, Encoding.Default) + "\t";
             System.IO.StreamReader file = new System.IO.StreamReader(path, Encoding.Default);
-            int edo_actual = 0, edo_anterior = 0, linea = 1, index = 0, code = 0;
+            int edo_actual = 0, edo_anterior = 0, linea = 1, index = 0;// , code = 0;
             string string_token = "", codigo;
             while ((codigo = file.ReadLine()) != null)
             {
@@ -51,7 +51,7 @@ namespace ProyectoCompilador
                             Success = false;
                         if (tokenType != "comm")
                         {
-                            tokens.Add(new Token(string_token, tokenType, linea, code - index + 1));
+                            tokens.Add(new Token(string_token, tokenType, linea, i));
                             if (tokens.Last().tokenType == "desc")
                                 Console.WriteLine("ERROR - Token desconocido ({0}) {1}:{2}", tokens.Last().nombre, tokens.Last().linea_codigo, tokens.Last().index);
                             else
@@ -61,22 +61,22 @@ namespace ProyectoCompilador
                         edo_anterior = edo_actual;
                         string_token = "";
                         i--;
-                        code = 0;
+                        // code = 0;
                     }
                     else if (edo_actual != 0)
                     {
                         edo_anterior = edo_actual;
                         string_token += char_actual;
-                        index = index == 0 ? i : index;
-                        if (code == 0) code = i;
+                        /*index = index == 0 ? i : index;
+                        if (code == 0) code = i;*/
                     }
+                    index = i;
                 }
                 linea++;
-                index = 0;
             }
             if (edo_actual == 41 || edo_actual == 42)
             {
-                tokens.Add(new Token(string_token, "desc", linea, code - index + 1));
+                tokens.Add(new Token(string_token, "desc", linea, index));
                 Success = false;
             }
             file.Close();
