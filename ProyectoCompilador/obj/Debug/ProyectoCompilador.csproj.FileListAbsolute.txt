@@ -1,0 +1,7 @@
+C:\Users\Marco\Documents\10s\compiladores\Proyecto-Compilador\ProyectoCompilador\obj\Debug\ProyectoCompilador.csprojResolveAssemblyReference.cache
+C:\Users\Marco\Documents\10s\compiladores\Proyecto-Compilador\ProyectoCompilador\obj\Debug\ProyectoCompilador.csproj.CoreCompileInputs.cache
+C:\Users\Marco\Documents\10s\compiladores\Proyecto-Compilador\ProyectoCompilador\bin\Debug\ProyectoCompilador.exe.config
+C:\Users\Marco\Documents\10s\compiladores\Proyecto-Compilador\ProyectoCompilador\bin\Debug\ProyectoCompilador.exe
+C:\Users\Marco\Documents\10s\compiladores\Proyecto-Compilador\ProyectoCompilador\bin\Debug\ProyectoCompilador.pdb
+C:\Users\Marco\Documents\10s\compiladores\Proyecto-Compilador\ProyectoCompilador\obj\Debug\ProyectoCompilador.exe
+C:\Users\Marco\Documents\10s\compiladores\Proyecto-Compilador\ProyectoCompilador\obj\Debug\ProyectoCompilador.pdb
